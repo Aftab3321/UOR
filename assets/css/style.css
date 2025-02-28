@@ -89,7 +89,7 @@ p {
     border: 0;
   }
   i.arrow-button::before {
-    content: url("/assets/icons/arrow-right.svg");
+    content: url("./assets/icons/arrow-right.svg");
   }
 
 
