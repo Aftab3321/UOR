@@ -261,7 +261,14 @@ h3.text-heading {
   font-size: 24px;
   line-height: 24px;
   color: var(--dark-blue-text);
-  margin-bottom: 16px;
+  min-height: 75px;
+  height: 100%;
+  max-height: 75px;
+  width: 285px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines before truncating */
+  overflow: hidden;
 }
 .universal-section .custom-card p.card-paragraph {
   font-weight: 500;
@@ -269,6 +276,15 @@ h3.text-heading {
   line-height: 19px;
   color: var(--dark-blue-text);
   opacity: 0.8;
+  min-height: 60px;
+  height: 100%;
+  max-height: 60px;
+  width: 285px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines before truncating */
+  overflow: hidden;
+  margin-bottom: 8px;
 }
 .universal-section .card-labels i,
 .universal-section .custom-card span {
@@ -307,9 +323,7 @@ h3.text-heading {
     display: grid;
     align-items: stretch;
 } */
-.universal-section .u-cards .card-content .card-heading {
-    min-height: 65px;
-}
+
 .universal-section .u-cards .card-content .card-headings p {
     margin-bottom: 10;
 }
@@ -368,16 +382,20 @@ footer .bottom-strip {
     min-height: 66px;
     background-color: var(--dark-background);
 }
-/* footer .galaxy-section {
-    min-height: 500px;
-    background: url("../images/footer-background.webp") 0px 0px no-repeat;
-    background-size: cover;
-    background-position: top center;
-} */
+footer .galaxy-section {
+    max-height: 500px;
+    overflow: hidden;
+}
+footer .galaxy-section .rotating-galaxy-container {
+    transform: translateY(-100px);
+}
 
 
 /* Responsive Margin and Padding */
-@media (max-width: 1200px) {
+@media (max-width: 1485px) {
+    .universal-section .u-cards .card-content .card-heading {
+    min-height: 80px;
+}
 }
 
 
