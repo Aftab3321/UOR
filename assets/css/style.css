@@ -31,7 +31,7 @@ p {
 }
 #root {
   background: linear-gradient(180deg, #140032 25%, #360070 100%);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 section {
   padding-block: 130px;
@@ -140,7 +140,6 @@ header #navbarNav ul {
   min-height: 650px;
   display: grid;
   place-items: center;
-  padding-block: 3rem;
 }
 .hero-section .hero-content-wrapper {
   display: grid;
@@ -158,7 +157,6 @@ header #navbarNav ul {
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 3rem 1rem;
 }
 .pathsplaining-subheading {
   text-align: center;
@@ -218,7 +216,7 @@ h3.text-heading {
 }
 .mathsplaining-cards .math-block-content {
   display: grid;
-  gap: 24px;
+  /* gap: 24px; */
   height: 250px;
 }
 .mathsplaining-cards .math-block-content p.text-heading {
@@ -301,7 +299,20 @@ h3.text-heading {
 .universal-section .custom-card img {
     width: 100%;
   }
-
+/* .universal-section .u-cards .card-content {
+    display: grid;
+    align-items: stretch;
+} */
+/* .universal-section .u-cards .card-content .card-headings {
+    display: grid;
+    align-items: stretch;
+} */
+.universal-section .u-cards .card-content .card-heading {
+    min-height: 65px;
+}
+.universal-section .u-cards .card-content .card-headings p {
+    margin-bottom: 10;
+}
 .custom-container {
   width: 97%;
   max-width: 1441px;
@@ -357,12 +368,12 @@ footer .bottom-strip {
     min-height: 66px;
     background-color: var(--dark-background);
 }
-footer .galaxy-section {
+/* footer .galaxy-section {
     min-height: 500px;
     background: url("../images/footer-background.webp") 0px 0px no-repeat;
     background-size: cover;
     background-position: top center;
-}
+} */
 
 
 /* Responsive Margin and Padding */
