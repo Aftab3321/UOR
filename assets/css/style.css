@@ -323,6 +323,8 @@ h3.text-heading {
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
+    padding-left: 0;
+    row-gap: 10px;
 }
 .explorable-section .links-container ul li {
     color: var(--text-light);
@@ -330,8 +332,17 @@ h3.text-heading {
     border-right: 1px solid #fff;
     opacity: 0.4;
 }
+.explorable-section .links-container ul li:last-child {
+    border-right: 0;
+}
 .explorable-section .links-container ul li.active {
     opacity: 1;
+}
+.explorable-section .links-container ul li a {
+    font-family: var(--inter);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
 }
 .link-text-paragraph {
     margin-top: 40px;
