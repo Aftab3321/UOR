@@ -13,6 +13,7 @@
     --heading-color: rgba(245, 0, 255, 0.8);
     --text-light: #ffffff;
     --semi-transparent-light-text: rgba(255, 255, 255, 0.4);
+    --dark-blue-text: #140032;
 }
 img {
     max-width: 100%;
@@ -24,17 +25,24 @@ a {
 }
 p {
     font-family: var(--inter);
-    font-size: 18px;
     line-height: 24px;
     font-weight: normal;
 }
 #root {
     background: linear-gradient(180deg, #140032 25%, #360070 100%);
 }
-
+section {
+    padding-block: 130px;
+}
 
 
 /* some general styles#390076 */
+.fs-18 {
+    font-size: 18px;
+}
+.fs-16 {
+    font-size: 16px;
+}
 .button {
     font-family: var(--inter);
     font-weight: 500;
@@ -89,16 +97,37 @@ p {
     border: 0;
   }
   i.arrow-button::before {
-    content: url("./assets/icons/arrow-right.svg");
+    content: url("../icons/arrow-right.svg");
+  }
+  i.chain-logo::before {
+    content: url("../icons/link-circle.svg");
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+  i.star-logo::before {
+    content: url("../icons/star-logo.svg");
+  }
+  i.chat-gpt-logo::before {
+    content: url("../icons/gpt-logo.svg");
   }
 
 
-
-
-/* styles start here */
+/* Styles start here */
 header {
     background-color: #000;
     padding-block: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Fallback for browsers that do not support sticky */
+@supports not (position: sticky) {
+    header {
+        position: relative;
+    }
 }
 header #navbarNav ul {
     padding-block: 0px;
@@ -129,7 +158,11 @@ header #navbarNav ul {
     color: white;
     padding: 3rem 1rem;
 }
-
+.pathsplaining-subheading {
+    text-align: center;
+    width: 55%;
+    margin-top: 35px;
+}
 
 .glow-text {
     position: relative;
@@ -154,6 +187,7 @@ header #navbarNav ul {
     margin: auto;
     display: grid;
     align-items: stretch;
+    gap: 39px;
 }
 .math-block .button-container {
     display: flex;
@@ -173,17 +207,101 @@ h3.text-heading {
     justify-content: space-between;
 }
 .equation-section {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-    padding-block: 70px;
+    height: 138px;
 }
 .math-contain-logo {
     text-align: center;
 }
+.mathsplaining-cards .math-block-content {
+    display: grid;
+    gap: 24px;
+    height: 250px;
+}
+.mathsplaining-cards .math-block-content p.text-heading {
+   margin-bottom: 40px;
+}
 
+.universal-section .universal-section-cards {
+    margin-top: 100px;
+}
+.universal-section .universal-section-cards--wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(467px, 1fr));
+    column-gap: 20px;
+    row-gap: 64px;
+    justify-content: center;
+}
+.universal-section .universal-section-cards--wrapper .u-cards {
+    margin-inline: auto;
+}
+.universal-section .heading-wrapper p {
+    max-width: 550px;
+}
+.universal-section .card-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.universal-section .card {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 16px;
+    padding: 24px 16px;
+    /* max-width: 550px; */
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 4px 4px 0px #F500FF;
+}
+.universal-section .card h3.card-heading {
+    font-family: var(--inter);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--dark-blue-text);
+    margin-bottom: 16px;
+}
+.universal-section .card p.card-paragraph {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--dark-blue-text);
+    opacity: 0.8;
+}
+.universal-section .card-labels i,
+.universal-section .card span {
+    font-family: var(--inter);
+    font-weight: normal;
+    line-height: 16px;
+    font-size: 14px;
+    opacity: 0.4;
+    color: var(--dark-blue-text);
+}
+.universal-section div.profile-picture-wrapper {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.universal-section div.profile-picture-wrapper p.name {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--text-light);
+    display: flex;
 
+    align-items: center;
+}
 
+.custom-container {
+    width: 97%;
+    max-width: 1441px;
+    margin: 0 auto;
+}
 
 
 /* Responsive Margin and Padding */
@@ -199,6 +317,14 @@ h3.text-heading {
         padding-block: 40px 25px;
     }
   }
+  @media (max-width: 1200px) {
+    .custom-container {
+        max-width: 95%;
+    }
+  }
   @media (max-width: 1024px) {
     .hero-section .hero-image {margin-inline: auto !important; transform: initial !important; padding-block: 50px;}
+    .custom-container {
+        max-width: 95%;
+    }
   }
