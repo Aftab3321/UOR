@@ -48,7 +48,10 @@
 @media screen and (max-width: 768px) {
   .hero-section .galaxy-wrapper { transform: translate(0px, 0px) scale(.56); }
 }
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 430px) {
+  .hero-section .galaxy-wrapper { transform: translate(0px, 0px) scale(.5); }
+}
+@media screen and (max-width: 356px) {
   .hero-section .galaxy-wrapper { transform: translate(0px, 0px) scale(.3); }
 }
 

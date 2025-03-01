@@ -405,6 +405,9 @@ footer .bottom-strip {
 .universal-section .custom-card p.card-paragraph {
     font-size: 12px;
     line-height: 16px;
+    min-height: 50px;
+    height: 100%;
+    max-height: 50px;
 }
 .universal-section .card-labels {
     grid-template-columns: 1fr 1fr;
@@ -412,6 +415,9 @@ footer .bottom-strip {
 }
 
 @media screen and (max-width: 768px) {
+    section {
+        padding-block: 70px;
+    }
   .hero-section {
     padding-block-end: 0 !important;
   }
