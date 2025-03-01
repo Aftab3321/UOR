@@ -30,7 +30,7 @@ p {
   font-weight: normal;
 }
 #root {
-  background: linear-gradient(180deg, #140032 25%, #360070 100%);
+  background: linear-gradient(180deg, #140032 39%, #380174 55%);
   overflow-x: hidden;
 }
 section {
@@ -379,15 +379,15 @@ footer .bottom-strip {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 66px;
+    min-height: 95px;
     background-color: var(--dark-background);
 }
 footer .galaxy-section {
-    max-height: 500px;
+    max-height: 500px; 
     overflow: hidden;
 }
 footer .galaxy-section .rotating-galaxy-container {
-    transform: translateY(-100px);
+    transform: translateY(-200px);
 }
 
 

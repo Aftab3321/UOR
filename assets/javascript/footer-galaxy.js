@@ -85,7 +85,7 @@ let scene, camera, controls, fov, ratio, near, far, shadow, back, light, rendere
             scene = new THREE.Scene();
             // scene.fog = new THREE.Fog(0x363d3d, -1, 3000 );
             camera = new THREE.PerspectiveCamera(fov, ratio, near, far);
-            camera.position.z = 100;
+            camera.position.z = 110;
             camera.position.y = -300;
             camera.lookAt(new THREE.Vector3(0, 0, 0));
             renderer = new THREE.WebGLRenderer({
