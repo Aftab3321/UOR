@@ -206,10 +206,52 @@ h3.text-heading {
   justify-content: space-between;
 }
 .equation-section {
-  display: grid;
+  /* display: grid;
   align-items: center;
-  justify-content: center;
-  height: 138px;
+  justify-content: center; */
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 80px;
+}
+.equation-section .image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.equation-section .image-wrapper.easy-image {
+  background: url("../images/easy.png") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+}
+.equation-section .image-wrapper.easy-image:hover {
+  background: url("../images/easy.gif") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(0);
+}
+.equation-section .image-wrapper.mid-image {
+  background: url("../images/medium.png") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+}
+.equation-section .image-wrapper.mid-image:hover {
+  background: url("../images/medium.gif") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(0);
+}
+.equation-section .image-wrapper.mind-image {
+  background: url("../images/mind.png") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+}
+.equation-section .image-wrapper.mind-image:hover {
+  background: url("../images/mind.gif") 0px 0px no-repeat;
+  background-size: cover;
+  filter: grayscale(0);
+}
+.equation-section img {
+  object-fit: cover;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 .math-contain-logo {
   text-align: center;
@@ -354,13 +396,15 @@ h3.text-heading {
 .explorable-section .links-container ul li {
     color: var(--text-light);
     padding-inline: 16px;
-    border-right: 1px solid #fff;
-    opacity: 0.4;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 .explorable-section .links-container ul li:last-child {
     border-right: 0;
 }
-.explorable-section .links-container ul li.active {
+.explorable-section .links-container ul li a {
+    opacity: 0.4;
+}
+.explorable-section .links-container ul li a.active {
     opacity: 1;
 }
 .explorable-section .links-container ul li a {
@@ -387,7 +431,7 @@ footer .galaxy-section {
     overflow: hidden;
 }
 footer .galaxy-section .rotating-galaxy-container {
-    transform: translateY(-200px);
+    /* transform: translateY(-200px); */
 }
 
 
