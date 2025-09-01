@@ -10,3 +10,8 @@ function lazyLoad() {
 
 window.addEventListener("scroll", lazyLoad);
 window.addEventListener("load", lazyLoad);
+
+window.addEventListener("DOMContentLoaded", () => {
+    const galaxy_wrapper = document.getElementById("hero-galazy-wrapper-div");
+    galaxy_wrapper.style.display = "block";
+})
