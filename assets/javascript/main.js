@@ -1,17 +1,19 @@
-function lazyLoad() {
+document.addEventListener("DOMContentLoaded", () => {
   const lazyImages = document.querySelectorAll("img.lazy");
-  lazyImages.forEach(img => {
-    if (img.getBoundingClientRect().top < window.innerHeight) {
-      img.src = img.dataset.src;
-      img.classList.remove("lazy");
-    }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src; // swap placeholder with real image
+        img.classList.remove("lazy");
+        observer.unobserve(img);
+      }
+    });
   });
-}
 
-window.addEventListener("scroll", lazyLoad);
-window.addEventListener("load", lazyLoad);
+  lazyImages.forEach(img => observer.observe(img));
 
-window.addEventListener("DOMContentLoaded", () => {
-    const galaxy_wrapper = document.getElementById("hero-galazy-wrapper-div");
+  const galaxy_wrapper = document.getElementById("hero-galazy-wrapper-div");
     galaxy_wrapper.style.display = "block";
-})
+});
